@@ -1,18 +1,16 @@
 # 🌸 SVM Iris Classifier
 
-Phân loại loài hoa Iris bằng Support Vector Machine (SVM) với kernel tuyến tính. Dự án này là một ví dụ nhỏ giúp làm quen với mô hình SVM trong Machine Learning.
+This project demonstrates the classification of Iris flower species using a Support Vector Machine (SVM) with a linear kernel. It serves as a small example to familiarize users with the SVM model in Machine Learning.
 
-## 🎯 Mục tiêu
+## 🎯 Objectives
 
-- Áp dụng kiến thức về SVM để giải bài toán phân loại.
-- Hiểu và thực hành quá trình train/test/predict với mô hình SVM.
-- Tính toán và trực quan hóa đường biên phân cách (margin).
+- Apply SVM knowledge to solve a classification problem.
+- Understand and practice the train/test/predict process with an SVM model.
+- Calculate and visualize the decision boundary (margin).
 
----
+## 📊 Data
 
-## 📊 Dữ liệu
-
-Sử dụng bộ dữ liệu **Iris** từ `scikit-learn`, bao gồm 150 mẫu với 4 thuộc tính:
+The project uses the **Iris** dataset from `scikit-learn`, which includes 150 samples with 4 features:
 
 - `sepal length (cm)`
 - `sepal width (cm)`
@@ -20,46 +18,44 @@ Sử dụng bộ dữ liệu **Iris** từ `scikit-learn`, bao gồm 150 mẫu v
 - `petal width (cm)`
 - `species` (label: 0 = setosa, 1 = versicolor, 2 = virginica)
 
----
+## 🧠 Model
 
-## 🧠 Mô hình
+- Model: `SVC(kernel='linear')` from `sklearn.svm`
+- Concept: Find the optimal hyperplane to separate data.
+- **Separation Formula**:  
+  `yᵢ (w ⋅ xᵢ + b) ≥ 1` for all i  
+  ⇒ The distance between the two margins is **2 / ||w||**
 
-- Mô hình: `SVC(kernel='linear')` từ `sklearn.svm`
-- Ý tưởng: Tìm siêu phẳng phân chia dữ liệu tối ưu.
-- **Công thức phân chia**:  
-  `yᵢ (w ⋅ xᵢ + b) ≥ 1` với ∀i  
-  ⇒ Khoảng cách giữa 2 biên là **2 / ||w||**
+## 📁 Project Structure
 
----
-
-## 📁 Cấu trúc thư mục
-
+```
 svm_iris_classifier/
-├── data/                   # (tùy chọn) nơi lưu file iris.csv nếu cần
-├── models/                 # Lưu model đã train (svm_model.pkl)
-├── notebooks/              # Notebook khám phá dữ liệu (EDA)
-├── src/                    # Mã nguồn chính
-│   ├── train.py            # Huấn luyện và đánh giá mô hình
-│   ├── predict.py          # Dự đoán với mẫu mới
-│   └── utils.py            # Hàm phụ trợ (nếu cần)
-├── requirements.txt        # Thư viện cần thiết
+├── data/                   # (Optional) Location to store iris.csv if needed
+├── models/                 # Stores trained models (e.g., svm_model.pkl)
+├── notebooks/              # Jupyter notebooks for data exploration (EDA)
+├── src/                    # Main source code
+│   ├── train.py            # Trains and evaluates the model
+│   ├── predict.py          # Makes predictions on new samples
+│   └── utils.py            # Helper functions (if any)
+├── requirements.txt        # Required libraries
 └── README.md
+```
 
----
-## 🚀 Cách chạy
+## 🚀 How to Run
 
-### 1. Cài đặt thư viện
+### 1. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Train mô hình
+### 2. Train the Model
 
 ```bash
 python src/train.py
 ```
 
-### 3. Dự đoán mẫu mới
+### 3. Predict New Samples
 
 ```bash
 python src/predict.py
