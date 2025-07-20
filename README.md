@@ -61,3 +61,7 @@ python src/train.py
 python src/predict.py
 ```
 
+## 📚 Further Reading
+
+- [Support Vector Machine (SVM) Basics](docs/SVM_Basics.md)
+
