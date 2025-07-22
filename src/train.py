@@ -19,10 +19,12 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Train-test split. 80% of the data is used to train the model, and the remaining 20% is held out to evaluate its performance
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.2, random_state=42
+)
 
 # Train SVM with linear kernel. This is a simple SVM model that uses a linear kernel to separate the data into different classes.
-clf = SVC(kernel='linear')
+clf = SVC(kernel="linear")
 clf.fit(X_train, y_train)
 
 # Evaluate. The model's performance is evaluated using the test set.
@@ -30,6 +32,6 @@ y_pred = clf.predict(X_test)
 print(classification_report(y_test, y_pred))
 
 # Save model and scaler. The model and scaler are saved to the models directory.
-os.makedirs('models', exist_ok=True)
-joblib.dump(clf, 'models/svm_model.pkl')
-joblib.dump(scaler, 'models/scaler.pkl')
+os.makedirs("models", exist_ok=True)
+joblib.dump(clf, "models/svm_model.pkl")
+joblib.dump(scaler, "models/scaler.pkl")

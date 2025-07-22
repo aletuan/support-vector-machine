@@ -5,8 +5,8 @@ import joblib
 import numpy as np
 
 # Load model and scaler. The model and scaler are loaded from the models directory.
-clf = joblib.load('models/svm_model.pkl')
-scaler = joblib.load('models/scaler.pkl')
+clf = joblib.load("models/svm_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
 
 # Sample input (e.g. [5.1, 3.5, 1.4, 0.2])
 sample = np.array([[5.1, 3.5, 1.4, 0.2]])

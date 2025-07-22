@@ -44,9 +44,9 @@ This file provides essential context for the Gemini CLI agent to effectively und
 
 ## 5. Testing and Linting
 
-- **Testing Framework**: No explicit unit testing framework (e.g., `pytest`) is currently set up for this project.
-- **Linting/Formatting**: No explicit linting or code formatting tools (e.g., `flake8`, `black`) are currently configured.
+- **Testing Framework**: Always requiring unit testing framework (e.g., `pytest`) for this project.
+- **Linting/Formatting**: Always requiring linting or code formatting tools (e.g., `flake8`, `black`) are currently configured.
 
 ## 6. User Preferences
 
-- **Unit Tests**: The user has explicitly stated that I should *not* run unit tests automatically after making changes.
+- **Unit Tests**: The user has explicitly stated that I should run unit tests automatically after making changes.
